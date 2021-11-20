@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.submission3_githubuser">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Submisson3_GithubUser">
+        <activity
+            android:name=".form.SplashScreenActivity"
+            android:theme="@style/SplashTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"
+            android:label="@string/list_user"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".form.DetailUserActivity"
+            android:label="@string/user_detail"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".form.SwitchThemeActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".form.ListFavoriteActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".form.DetailFavoriteActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

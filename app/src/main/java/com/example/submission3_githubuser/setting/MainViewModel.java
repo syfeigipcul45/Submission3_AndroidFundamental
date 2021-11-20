@@ -1,0 +1,22 @@
+package com.example.submission3_githubuser.setting;
+
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.LiveDataReactiveStreams;
+import androidx.lifecycle.ViewModel;
+
+public class MainViewModel extends ViewModel {
+
+    private final SettingPreferences pref;
+
+    public MainViewModel(SettingPreferences pref){
+        this.pref = pref;
+    }
+
+    public LiveData<Boolean> getThemeSettings() {
+        return LiveDataReactiveStreams.fromPublisher(pref.getThemeSetting());
+    }
+
+    public void saveThemeSetting(Boolean isDarkModeActive){
+        pref.saveThemeSetting(isDarkModeActive);
+    }
+}
